@@ -16,3 +16,11 @@ const checkPalindrome = (word) => {
     return false;
   }
 }
+
+//Section 3
+const sumDigits = (num) => {
+  let digitArray = num.toString().split('').map(digit => parseInt(digit));
+  let reducer = (acc, cur) => acc + cur;
+  let sum = digitArray.reduce(reducer);
+  return sum;
+}
