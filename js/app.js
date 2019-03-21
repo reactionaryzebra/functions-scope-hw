@@ -7,8 +7,7 @@
 
 //Section 2
 const checkPalindrome = (word) => {
-  let lowerWord = word.toLowerCase().split(' ').join('');
-  console.log(lowerWord);
+  let lowerWord = word.toLowerCase().replace(/[^A-Z0-9]/ig, '');
   let backwardsWord = lowerWord.split('').reverse().join('');
   if (backwardsWord === lowerWord){
     return true;
