@@ -4,3 +4,15 @@
 //2) Console.log simply logs values to the developer console.  Return will serve as the output of a function to be
 //used in other parts of your code later.
 //3) A function returning a value means that function can be used later on in your code to affect other logic.
+
+//Section 2
+const checkPalindrome = (word) => {
+  let lowerWord = word.toLowerCase();
+  let backwardsWord = lowerWord.split('').reverse().join('');
+  console.log(lowerWord, backwardsWord);
+  if (backwardsWord === lowerWord){
+    return true;
+  } else {
+    return false;
+  }
+}
