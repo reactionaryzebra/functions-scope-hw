@@ -30,3 +30,21 @@ const calculateSide = (side1, side2) => Math.hypot(side1, side2);
 
 //Section 5
 const sumArray = (arr) => arr.reduce((red, acc,) => red+acc);
+
+//Section 6
+const checkPrime = (num) => {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0){
+      return false;
+    }
+  }
+  return true;
+}
+
+const printPrimes = (num) => {
+  for (let i = 1; i <= num; i++) {
+    if (checkPrime(i)){
+      console.log(`${i} is a prime number`)
+    }
+  }
+}
