@@ -24,3 +24,6 @@ const sumDigits = (num) => {
   let sum = digitArray.reduce(reducer);
   return sum;
 }
+
+//Section 4
+const calculateSide = (side1, side2) => Math.hypot(side1, side2);
