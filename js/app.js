@@ -27,3 +27,6 @@ const sumDigits = (num) => {
 
 //Section 4
 const calculateSide = (side1, side2) => Math.hypot(side1, side2);
+
+//Section 5
+const sumArray = (arr) => arr.reduce((red, acc,) => red+acc);
