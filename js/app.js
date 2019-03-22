@@ -68,3 +68,17 @@ const reverseString = (str) => {
   }
   return reversedString;
 }
+
+//Hungry Question 6
+const checkWordPalindrome = (phrase) => {
+  let phraseArray = phrase.toLowerCase().split(' ').map(str => str.replace(/[^A-Z]/ig, ''));
+  let reversePhrase = phrase.toLowerCase().split(' ').map(str => str.replace(/[^A-Z]/ig, '')).reverse();
+  console.log(phraseArray);
+  console.log(reversePhrase);
+  for (let i = 0; i < phraseArray.length; i++) {
+    if (phraseArray[i] != reversePhrase[i]){
+      return false;
+    }
+  }
+  return true;
+}
