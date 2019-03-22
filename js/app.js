@@ -48,17 +48,19 @@ const printPrimes = (num) => {
   }
 }
 
-//Hungry Question 2
-// const insertDash = (num) => {
-//   let numArray = num.toString().split('').map(digit => parseInt(digit));
-//   for (let i = 0; i < numArray.length; i++) {
-//     if (numArray[i] % 2 != 0){
-//       if (numArray[i+1] % 2 != 0) {
-//
-//       }
-//     }
-//   }
-// }
+// Hungry Question 2
+const insertDash = (num) => {
+  let numArray = num.toString().split('').map(digit => parseInt(digit));
+  let newArray = [];
+  for (let i = 0; i <= numArray.length; i++) {
+    newArray.push(numArray[i]);
+    if((numArray[i] % 2 === 1) && (numArray[i+1] % 2 === 1)){
+      newArray.push('-');
+    }
+  }
+  return newArray.join('');
+}
+console.log(insertDash(454793));
 
 //Hungry Question 3
 const reverseString = (str) => {
